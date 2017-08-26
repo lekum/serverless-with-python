@@ -10,7 +10,6 @@
 ### Initialize the project
 
 ```
-pip install chalice
 chalice new-project helloworld && cd helloworld
 ```
 
