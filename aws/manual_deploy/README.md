@@ -1,13 +1,13 @@
 # Manual deployment of a Python Lambda function
 
-# Requirements
+## Requirements
 
 - The AWS tools (`pip install awscli`) and [credentials](http://docs.aws.amazon.com/cli/latest/userguide/cli-config-files.html) already set up
 - Select one AWS region to deploy your instance to (`my-aws-region`)
 
-# Steps
+## Steps
 
-## Create the code package
+### Create the code package
 
 For example, one provided in the file `hello_python.py`:
 
@@ -23,7 +23,7 @@ Create the `.zip` package:
 zip deployment-package.zip hello_python.py
 ```
 
-## Create the appropriate IAM role and attach the policy
+### Create the appropriate IAM role and attach the policy
 
 ```
 aws iam create-role \
@@ -48,7 +48,7 @@ Take note of the role arn (`role-arn`). Then, attach the policy that grants basi
 aws iam attach-role-policy --role-name my_basic_execution_role --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
 ```
 
-## Upload the package
+### Upload the package
 
 ```
 aws lambda create-function \
@@ -64,7 +64,7 @@ aws lambda create-function \
 
 The lambda function is up and running! Take note of the `FunctionArn` (`function-arn`)
 
-## Test the function
+### Test the function
 
 Invoke the lambda function with an input event as payload:
 
