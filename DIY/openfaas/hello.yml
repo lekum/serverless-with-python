@@ -1,0 +1,7 @@
+provider:
+  name: faas
+  gateway: http://localhost:8080
+
+functions:
+  hello:
+    image: lekum/faas-hello
