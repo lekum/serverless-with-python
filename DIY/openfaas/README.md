@@ -132,8 +132,18 @@ echo '{"first_name": "Margaret", "last_name": "Hamilton"}' | faas-cli invoke --n
 
 Alternatively: you can go to the port 8080 of any member of the cluster and try invoking it on the web interface.
 
+http://localhost:8080/
+
+![Portal UI](https://user-images.githubusercontent.com/6358735/30772105-f0e599b4-a04c-11e7-9728-922240cb76b8.png)
+
 Otherwise, you can just run this from any node of the cluster:
 
 ```
 curl localhost:8080/function/hello -H "Content-Type: application/json" -X POST -d '{"first_name": "Margaret", "last_name": "Hamilton"}'
 ```
+
+Prometheus metrics are built-in and available on http://localhost:9090/
+
+A good query is `rate(gateway_function_invocation_total[20s])` - then click "Graph"
+
+Prometheus metrics are also used for auto-scaling your functions. You can find out more on the OpenFaaS repo - https://github.com/alexellis/faas/
