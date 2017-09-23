@@ -22,7 +22,7 @@ curl -sL https://cli.get-faas.com/ | sudo sh
 
 ### Create a handler function and a Dockerfile
 
-Since Python3 is still not a valid template language for the platfor, we need to package our function in a Docker image and upload it to the Dockerhub.
+Since Python3 is still not a valid template language for the platform, we need to package our function in a Docker image and upload it to the Dockerhub.
 
 For example, this could be our handler (`hello.py`):
 
