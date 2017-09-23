@@ -9,4 +9,3 @@ if not os.isatty(sys.stdin.fileno()):
     message = 'Hello {} {}!'.format(first_name, last_name)
 
 print(json.dumps({"message": message}))
-`
