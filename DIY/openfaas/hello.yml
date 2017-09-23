@@ -6,5 +6,4 @@ functions:
   hello:
     lang: Dockerfile
     handler: ./handler
-    #image: #/faas-hello
     image: alexellis2/faas-hello-python3
