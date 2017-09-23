@@ -1,7 +1,10 @@
 provider:
   name: faas
-  gateway: http://localhost:8080
+  gateway: http://127.0.0.1:8080
 
 functions:
   hello:
-    image: lekum/faas-hello
+    lang: Dockerfile
+    handler: ./handler
+    #image: #/faas-hello
+    image: alexellis2/faas-hello-python3
